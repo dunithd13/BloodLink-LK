@@ -1027,14 +1027,6 @@ The following AI tools were used during development:
 * **Gemini**
 * **Claude**
 
-### AI usage details
-
-| Team Member        | AI Tool            | Purpose            |
-| ------------------ | ------------------ | ------------------ |
-| __________________ | __________________ | __________________ |
-| __________________ | __________________ | __________________ |
-| __________________ | __________________ | __________________ |
-| __________________ | __________________ | __________________ |
 
 ---
 
@@ -1042,14 +1034,37 @@ The following AI tools were used during development:
 
 The following section will be completed with the actual prompts used during development.
 
-| Team Member        | AI Tool            | Exact Prompt                   | Purpose            | How the Output Was Checked / Modified |
-| ------------------ | ------------------ | ------------------------------ | ------------------ | ------------------------------------- |
-| __________________ | __________________ | ______________________________ | __________________ | ______________________________        |
-| __________________ | __________________ | ______________________________ | __________________ | ______________________________        |
-| __________________ | __________________ | ______________________________ | __________________ | ______________________________        |
-| __________________ | __________________ | ______________________________ | __________________ | ______________________________        |
+# 🤖 AI Tools Used
 
-The team should replace these placeholders with the actual prompts used during development.
+The project team used the following AI tools during the development of BloodLink LK:
+
+* **Gemini**
+* **ChatGPT**
+* **Claude**
+
+The tools were used for project planning, database development, backend development, authentication, repository management, frontend planning, deployment, troubleshooting, and documentation.
+
+---
+
+# 📝 AI Prompt Log
+
+The following table documents the AI tools, prompts, purposes, and outcomes used by the team during development.
+
+| Team Member          | AI Tool     | Prompt                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | Purpose                                                                                                                                                                                              | Output / How It Was Used                                                                                                                                                                                                                                                               |
+| -------------------- | ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **IT24101861**       | **Gemini**  | **"ok, we divide our workload and my part is the database and its features. i plan to use posgresql... guide me through on what i can do independantly... lets start from if my sql is working properly or not"**                                                                                                                                                                                                                                                                                           | To independently develop the database and database-related features, starting with PostgreSQL setup and verification.                                                                                | Verified the local PostgreSQL server using `pg_isready`, manually created the database through the `psql` shell, and applied Entity Framework Core migrations.                                                                                                                         |
+| **IT24101861**       | **Gemini**  | **"Create a repository on GitHub... Your README.md must include: project title; the selected problem; the proposed solution... heres the story, this is exact workflow... catch the technologies used from these two front and backend zips"**                                                                                                                                                                                                                                                              | To generate the project README.md, organize the documentation requirements, and align the project details with the actual frontend and backend implementation.                                       | Used to structure the GitHub README, document the project workflow, technologies, features, team responsibilities, and prepare the documentation for the project submission.                                                                                                           |
+| **IT24100802**       | **ChatGPT** | **"I need to create the repository for our new project and organize the project properly so that each team member can work on their own student ID branch and later merge their work into the main branch. We use React front end and ASP.NET backend with PostgreSQL database. I need guidance for proper repo creating."**                                                                                                                                                                                | To create a properly organized and manageable GitHub repository that supports team-based development using student ID branches and a main branch.                                                    | Provided guidance for organizing and managing the GitHub repository and establishing a suitable collaborative branching workflow.                                                                                                                                                      |
+| **IT24100802**       | **ChatGPT** | **"To host the database I am planning to use Supabase for hosting the PostgreSQL database. I also need to deploy the React frontend on Vercell and ASP.NET Core backend online. Can you explain the simplest way to connect my ASP.NET Core backend to a Supabase PostgreSQL database during development and deployment?"**                                                                                                                                                                                 | To determine how to connect the ASP.NET Core backend to a Supabase PostgreSQL database during development and deployment, while deploying the frontend and backend separately.                       | Provided guidance for connecting the backend to Supabase PostgreSQL and configuring the deployed backend environment.                                                                                                                                                                  |
+| **IT24100802**       | **ChatGPT** | **"I want to know about the alternative hosting platform for our ASP.NET backend with Supabase PostgreSQL database"**                                                                                                                                                                                                                                                                                                                                                                                       | To identify an alternative hosting platform for the ASP.NET Core backend when the initially considered platform was not suitable.                                                                    | Identified **Railway** as an alternative platform for hosting the ASP.NET Core backend with Supabase PostgreSQL.                                                                                                                                                                       |
+| **IT24102710**       | **ChatGPT** | **"Initialize this hackathon project. First, read: AGENTS.md, PROJECT.md, TASK.md. Then inspect the project structure and existing implementation. Do not modify any files yet. Give me a concise report containing: What the project does, Current technology stack, Current architecture, Existing features, Current task from TASK.md, Files relevant to the current task, Any obvious problems or risks, Your recommended implementation approach. Wait for my approval before making major changes."** | To understand the existing project instructions, architecture, technologies, implementation, current tasks, relevant files, risks, and recommended development approach before making major changes. | Produced a project initialization report covering the application's purpose, technology stack, architecture, existing features, current task, relevant files, potential risks, and recommended implementation approach without modifying project files.                                |
+| **IT24102710**       | **ChatGPT** | **"i want to modify my task.md file for user login and registration, take these instructions and update the task.md file. create one admin and give me the credentials. for other users there should be a registration page and login too. followings are the input fields for registration page: name, email, password and confirm password (give instruction to create strong password), location, contact number, BloodGroup. followings are the input fields for login page: email and password."**     | To update the development task with user authentication and registration requirements for regular users and an administrator.                                                                        | Produced an updated `TASK.md` specification covering user registration, login, password requirements, user roles, administrator setup, and the required registration/login fields.                                                                                                     |
+| **IT24101801**       | **ChatGPT** | **"Build a .NET 8 ASP.NET Core Web API backend for a BloodLink LK blood donation platform using PostgreSQL and Entity Framework Core. Create models, DTOs, controllers, validation, blood-request management, donor availability, and blood-group compatibility matching. The system should support registered donors and requesters, plus emergency blood requests without login. Do not include unnecessary features such as payments or complex user management."**                                      | To generate the initial backend architecture and core BloodLink LK API functionality.                                                                                                                | Generated the initial .NET 8 backend structure including models, DTOs, `AppDbContext`, authentication-related files, `BloodRequestsController`, `DonorsController`, and blood compatibility logic. The generated code was reviewed and modified to match the project's exact workflow. |
+| **IT24101801**       | **ChatGPT** | **"Help me deploy my BloodLink LK .NET 8 ASP.NET Core backend with a PostgreSQL database hosted on Supabase. My GitHub repository contains separate backend and frontend folders. Explain how to configure the backend deployment, environment variables, database connection string, root directory, and deployment platform. Troubleshoot errors related to PostgreSQL connection strings, GitHub branch configuration, and hosting the .NET 8 API."**                                                    | To configure and troubleshoot deployment of the .NET 8 backend and securely connect it to the Supabase PostgreSQL database.                                                                          | Provided deployment configuration guidance and troubleshooting steps for the ASP.NET Core backend, PostgreSQL connection, environment variables, GitHub branch configuration, and hosting setup.                                                                                       |                                                                                                                                                                                                                                                  |
+
+### AI Usage Note
+
+AI-generated outputs were reviewed by the team and adapted to the project's actual requirements, architecture, codebase, and workflow. AI tools were used as development and documentation assistance rather than as a replacement for team implementation, testing, and verification.
 
 ---
 
@@ -1060,19 +1075,19 @@ The following links will be added after deployment and repository setup.
 ### GitHub Repository
 
 ```text
-[ ADD GITHUB REPOSITORY LINK HERE ]
+https://github.com/dunithd13/BloodLink-LK.git
 ```
 
 ### Deployed Application
 
-```text
-[ ADD DEPLOYED APPLICATION LINK HERE ]
+```text[
+[ ADD DEPLOYED APPLICATION LINK HERE ]](https://blood-link-lk.vercel.app/)
 ```
 
 ### Demonstration Video
 
 ```text
-[ ADD DEMONSTRATION VIDEO LINK HERE ]
+[[ ADD DEMONSTRATION VIDEO LINK HERE ]](https://mysliit-my.sharepoint.com/:v:/g/personal/it24101861_my_sliit_lk/IQAMq3P2McUzRqqNrbRkbJjdAReTpFJRwnQARhcI8Wun88c?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=1BKkC1)
 ```
 
 ---
