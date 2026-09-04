@@ -2,7 +2,10 @@ using BloodLinkLK.API.Data;
 using DotNetEnv;
 using Microsoft.EntityFrameworkCore;
 
-Env.Load();
+if (File.Exists(".env"))
+{
+    Env.Load();
+}
 
 var builder = WebApplication.CreateBuilder(args);
 
